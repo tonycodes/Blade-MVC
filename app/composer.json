@@ -1,0 +1,14 @@
+{
+    "name": "tony/test",
+    "description": "Testing OOP with blade.",
+    "authors": [
+        {
+            "name": "Tony",
+            "email": "anthony.james@gimo.co.uk"
+        }
+    ],
+    "require": {
+    	"philo/laravel-blade": "2.*",
+        "twitter/bootstrap": "3.3.*@dev"
+    }
+}
