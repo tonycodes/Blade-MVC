@@ -15,18 +15,17 @@ require('/app/config.php');
 
 # Grab the current route
 $slug = $_GET['slug'];
+echo $slug;
 
 # Insantiate the controller (this will be refactored)
 $HomeController = new HomeController();
 
 # Define some routes
-if ( $slug == 'home' ) { 
-	$HomeController->home(); 
-}
+if ( $slug == 'home' ) { $HomeController->home(); }
 
-# If all else fails, cut loose!
+# If all else fails, return a 404
 else {
-	header('404');
+	http_response_code(404);
 }
 
 ?>
