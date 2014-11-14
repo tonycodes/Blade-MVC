@@ -14,15 +14,15 @@
 require('/app/config.php');
 
 # Grab the current route
-$slug = $_GET['slug'];
-echo $slug;
+if ( isset($_GET['slug']) ) { $slug = $_GET['slug']; }
 
 # Insantiate the controller (this will be refactored)
-$HomeController = new HomeController();
+$PagesController = new PagesController();
 
 # Define some routes
-if ( $slug == 'home' ) { $HomeController->home(); }
-
+if ( !isset($slug) ) { $PagesController->getHome(); }
+elseif ( $slug == 'about' ) { $PagesController->getAbout(); }
+elseif ( $slug == 'contact' ) { $PagesController->getContact(); }
 # If all else fails, return a 404
 else {
 	http_response_code(404);
