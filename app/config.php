@@ -12,17 +12,8 @@
 |
 */
 
-$views = __DIR__ . '/view';
-$cache = __DIR__ . '/cache';
-
 // Debugging
 error_reporting(E_ALL);
-
-// Include controllers
-foreach (glob( __DIR__ . "/controller/*.php") as $filename)
-{
-    require $filename;
-}
 
 // Define config options here
 

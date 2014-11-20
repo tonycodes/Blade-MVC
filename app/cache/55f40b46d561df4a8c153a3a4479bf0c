@@ -1,0 +1,8 @@
+<?php $__env->startSection('title'); ?>
+Home page title
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+    <p>This is my homepage content.</p>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

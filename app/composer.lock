@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d480b98c3dbd011e2dddb82a7fea5ff7",
+    "hash": "a2b80430a9a6a85659c40160919ddd4f",
     "packages": [
         {
             "name": "illuminate/container",
@@ -46,6 +46,63 @@
                 }
             ],
             "time": "2014-09-11 19:02:16"
+        },
+        {
+            "name": "illuminate/database",
+            "version": "v4.2.9",
+            "target-dir": "Illuminate/Database",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/database.git",
+                "reference": "b66a7173ca6a81de3b2ccbd84372bee8624215f1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/b66a7173ca6a81de3b2ccbd84372bee8624215f1",
+                "reference": "b66a7173ca6a81de3b2ccbd84372bee8624215f1",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/container": "4.2.*",
+                "illuminate/events": "4.2.*",
+                "illuminate/support": "4.2.*",
+                "nesbot/carbon": "~1.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "illuminate/cache": "4.2.*",
+                "illuminate/console": "4.2.*",
+                "illuminate/filesystem": "4.2.*",
+                "illuminate/pagination": "4.2.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Illuminate\\Database": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                }
+            ],
+            "keywords": [
+                "database",
+                "laravel",
+                "orm",
+                "sql"
+            ],
+            "time": "2014-09-11 14:10:29"
         },
         {
             "name": "illuminate/events",
@@ -227,6 +284,52 @@
             "time": "2014-09-02 04:23:50"
         },
         {
+            "name": "nesbot/carbon",
+            "version": "1.13.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/briannesbitt/Carbon.git",
+                "reference": "5cb6e71055f7b0b57956b73d324cc4de31278f42"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/5cb6e71055f7b0b57956b73d324cc4de31278f42",
+                "reference": "5cb6e71055f7b0b57956b73d324cc4de31278f42",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Carbon": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Brian Nesbitt",
+                    "email": "brian@nesbot.com",
+                    "homepage": "http://nesbot.com"
+                }
+            ],
+            "description": "A simple API extension for DateTime.",
+            "homepage": "https://github.com/briannesbitt/Carbon",
+            "keywords": [
+                "date",
+                "datetime",
+                "time"
+            ],
+            "time": "2014-09-26 02:52:02"
+        },
+        {
             "name": "philo/laravel-blade",
             "version": "2.0",
             "source": {
@@ -319,12 +422,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "806490499a9c204071cae322cfbc6a47caed8c02"
+                "reference": "7bdc307b70caaad69fd88a6a9dd6de6a97e1505c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/806490499a9c204071cae322cfbc6a47caed8c02",
-                "reference": "806490499a9c204071cae322cfbc6a47caed8c02",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/7bdc307b70caaad69fd88a6a9dd6de6a97e1505c",
+                "reference": "7bdc307b70caaad69fd88a6a9dd6de6a97e1505c",
                 "shasum": ""
             },
             "replace": {
@@ -362,7 +465,7 @@
                 "responsive",
                 "web"
             ],
-            "time": "2014-11-13 01:27:38"
+            "time": "2014-11-13 23:18:55"
         }
     ],
     "packages-dev": [],

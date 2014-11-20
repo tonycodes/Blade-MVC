@@ -1,0 +1,40 @@
+<?php $__env->startSection('title'); ?>
+Users page title
+<?php $__env->stopSection(); ?>
+
+<?php if( isset($message) ): ?>
+	<div class="alert alert-danger text-center">
+	<?php echo $message; ?>
+
+	</div>
+<?php endif; ?>
+
+<div class="container">
+
+	<div class="row">
+		<div class="col-md-12">
+
+		<?php $__env->startSection('content'); ?>
+			<?php foreach( $users as $user ): ?>
+		    <table class="table table-bordered">
+			    <thead>
+				    <td>id</td>
+				    <td>First Name</td>
+				    <td>Last Name</td>
+				    <td>Email</td>
+			    </thead>
+			    <tr>
+				    <td><?php echo $user->id; ?></td>
+				    <td><?php echo $user->first_name; ?></td>
+				    <td><?php echo $user->last_name; ?></td>
+				    <td><?php echo $user->email; ?></td>
+			    </tr>
+		    </table>
+		    <?php endforeach; ?>
+		<?php $__env->stopSection(); ?>
+
+		</div>
+	</div>
+
+</div>
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,32 +1,37 @@
 <?php
 
-require 'app/vendor/autoload.php';
-use Philo\Blade\Blade;
+/*
+|-----------------------------------------------------------------------
+| Pages Controller
+|-----------------------------------------------------------------------
+| A demo controller to  demonstrate how easy it is to take routes and 
+| generate views accordingly.
+|
+*/
+
+use Philo\Blade\Blade; # -> Use the blade templating system
 
 Class PagesController {
 
 	public $views = 'app/view';
     public $cache = 'app/cache';
 
-	// Catch requests from index.php and throw a view with some objects.
-
+	# -> Catch requests from index.php and throw a view with some objects.
 	public function getHome() {
-		// Get the home page view
-		$blade = new Blade($this->views, $this->cache);
-		echo $blade->view()->make('home');
+		$blade = new Blade( $this->views, $this->cache ); # -> Sets up the Blade templating engine.
+		echo $blade->view()->make( 'home' ); # -> Generates the view.
 	}
 
 	public function getAbout() {
-		// Get the home page view
-		$blade = new Blade($this->views, $this->cache);
-		echo $blade->view()->make('about');
+		$blade = new Blade( $this->views, $this->cache );
+		echo $blade->view()->make( 'about');
 	}
 
 	public function getContact() {
-		// Get the home page view
-		$blade = new Blade($this->views, $this->cache);
-		echo $blade->view()->make('contact');
+		$blade = new Blade( $this->views, $this->cache );
+		echo $blade->view()->make( 'contact' );
 	}
+
 }
 
 ?>

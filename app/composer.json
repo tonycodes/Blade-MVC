@@ -9,6 +9,7 @@
     ],
     "require": {
     	"philo/laravel-blade": "2.*",
-        "twitter/bootstrap": "3.3.*@dev"
+        "twitter/bootstrap": "3.3.*@dev",
+        "illuminate/database": "*"
     }
 }

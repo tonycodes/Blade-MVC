@@ -11,10 +11,10 @@
     <title>@yield('title')</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="app/vendor/twitter/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/app/vendor/twitter/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Style specific CSS -->
-    <link href="app/vendor/twitter/bootstrap/dist/css/starter-template.css" rel="stylesheet">
+    <link href="/app/vendor/twitter/bootstrap/dist/css/starter-template.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -39,9 +39,10 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/blade-mvc/">Home</a></li>
-            <li><a href="about">About</a></li>
-            <li><a href="contact">Contact</a></li>
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/users">Users</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
