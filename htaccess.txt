@@ -1,3 +1,4 @@
+# Rules
 AddHandler application/x-httpd-php54 .php
 RewriteEngine On
 RewriteRule ^([^/d]+)/?$ index.php?slug=$1 [QSA]
