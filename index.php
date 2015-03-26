@@ -13,45 +13,43 @@
 |
 */
 
-# Grab blades stuff
+// Blade Templating Engine Requirements
 require __DIR__ . '/app/vendor/autoload.php';
 use Philo\Blade\Blade;
 
-# Grab the config file & DB
 require( __DIR__ . '/app/config.php');
 require( __DIR__ . '/app/database.php');
 
-# Grab all models
+// Fetch all models and controllers
 foreach (glob( __DIR__ . "/app/model/*.php") as $filename)
 {
     require $filename;
 }
 
-# Grab all controllers
 foreach (glob( __DIR__ . "/app/controller/*.php") as $filename)
 {
     require $filename;
 }
 
-# Grab the current route
+// Whats the current page?
 if ( isset($_GET['slug']) ) { $slug = $_GET['slug']; }
 if ( isset($_GET['id']) ) { $id = $_GET['id']; } else { $id = NULL; }
 
 
-# Insantiate the controller (this will be refactored)
+// Instantiate the controller (this will be refactored)
 $PagesController = new PagesController();
 $UserController = new UserController();
 
-# Define the root
+// Define the site root
 if ( !isset($slug) ) { $PagesController->getHome(); }
 
-# Define your roots
+// Define your routes
 elseif ( $slug == 'about' ) { $PagesController->getAbout(); }
 elseif ( $slug == 'contact' ) { $PagesController->getContact(); }
 elseif ( $slug == 'user' ) { $UserController->getViewUser($id); }
 elseif ( $slug == 'users' ) { $UserController->getViewUsers(); }
 
-# If all else fails, return a 404
+// Manage routes that are not defined, return a 404
 else {
 	http_response_code(404);
 	die('404');
